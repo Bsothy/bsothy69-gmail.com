@@ -24,7 +24,7 @@ void emp_crc() //Bunrithsothy
 }
 void mainfunction () //1.borey //2.Pich & Hong //3.Mr.Hao
 {
-
+printf("Hello world);
 }
 
 
