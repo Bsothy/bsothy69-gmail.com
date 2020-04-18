@@ -35,6 +35,8 @@ int main()
 {
   intro();
   emp_scrc();
+	print(" Please choose 1 or 2\n 1. Riel\n 2. USD\n");
+	switchf
   mainfunction();
 	
 
@@ -52,6 +54,7 @@ void emp_scrc() //Bunrithsothy
 }
 void mainfunction () //1.borey //2.Pich & Hong //3.Mr.Hao
 {
+	
 	printf("Enter Salary :");
 	scanf("%lf",&salary);
 	
