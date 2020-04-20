@@ -14,6 +14,7 @@
 //tax = tax rate
 //spouse_str = for string of spouse 
 //exrate= exchange rate
+//suminriel= sum of salary and bonus convert from usd to riel.
 //*/
 
 
@@ -31,7 +32,7 @@ void mainfunction();
 //Variable 
 char spouse_str;
 double salary=0, bonus=0,salary_notax=0,spouse=0,child=0,tax=0,last_salary=0,salary_tax=0,family=0,salary1=0;
-float exrate;
+float exrate,suminriel;
 
 int main()
 {
@@ -54,7 +55,8 @@ void emp_scrc() //Bunrithsothy
 }
 void mainfunction () //1.borey //2.Pich & Hong //3.Mr.Hao
 {
- //if they choose riel 	
+	
+//if they choose riel 	
 	printf("Enter Salary :");
 	scanf("%lf",&salary);
 	
@@ -154,6 +156,7 @@ void mainfunction () //1.borey //2.Pich & Hong //3.Mr.Hao
                 printf("Invalid");
             }
 	
+	
 //if they choose USD
 	printf(" Please input exchange rate:riel  ");
 	scanft("%f",&exrate);
@@ -207,9 +210,8 @@ void mainfunction () //1.borey //2.Pich & Hong //3.Mr.Hao
                 family = spouse + child; //sum husband or wife and childs //family member cal
 
                 salary_notax = 150000 * family; //find salary without tax
-
+		suminriel= (salary+bonus)*exrate;
                 salary = salary - salary_notax;
-
 
                 if (salary >= 0 && salary <= 1300000)
                 {
@@ -251,7 +253,7 @@ void mainfunction () //1.borey //2.Pich & Hong //3.Mr.Hao
 
                 last_salary = (salary + salary_notax + bonus) - salary_tax;
                 printf("Your Net Salary is :  %lfRiel\n",last_salary);
-	
+	        printf("Your Net Salary is : %f ",last_salary*exrate);
         }
 
 
